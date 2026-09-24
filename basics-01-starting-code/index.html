@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -9,16 +9,22 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
-    <script src="https://unpkg.com/vue@next" defer></script>
-    <script src="app.js" defer></script>
+    <script src="https://unpkg.com/vue@3.4.9/dist/vue.global.js" defer></script>
   </head>
   <body>
     <header>
       <h1>Vue Course Goals</h1>
     </header>
     <section id="user-goal">
-      <h2>My Course Goal</h2>
-      <p></p>
+      <h2>Master Course</h2>
+      <p>{{courseGoal}}</p>
+      <p>Learn more about <a href="{{vueLink}}">Vue</a></p>
+      <p>Learn more using "v-bind:href" <a v-bind:href="vueLink">Vue</a></p>
+      <p>{{outputGoal()}}</p>
+      <p>
+        another choice for output:: <span v-html="outputGoalChoice()"></span>
+      </p>
     </section>
+    <script src="app.js" defer></script>
   </body>
 </html>
