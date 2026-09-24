@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./style.css" />
+
+    <title>First App</title>
+  </head>
+
+  <body>
+    <div id="app">
+      <div>
+        <label for="goal">Goal</label>
+        <input type="text" id="goal" v-model.trim="enteredValue" />
+        <button type="button" v-on:click="addGoal" id="btnAdd">Add Goal</button>
+      </div>
+
+      <ul>
+        <li v-for="(goal, index) in goals" :key="index">{{ goal }}</li>
+      </ul>
+    </div>
+
+    <script src="https://unpkg.com/vue@3.4.9/dist/vue.global.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
