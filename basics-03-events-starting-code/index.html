@@ -22,8 +22,12 @@
       <button v-on:click.right="reduce(3)">Reduce</button>
       <p>Result: {{ counter }}</p>
 
-      <input type="text" v-model="Name" v-on:input="setName($event, 'Elsayed')" />
-      <p>Name: {{ Name }}</p>
+      <input
+        type="text"
+        v-model="Name"
+        v-on:input="setName($event, 'Elsayed')"
+      />
+      <p>Name: {{ fullName }}</p>
       <button v-on:click="resetInput">Reset</button>
       <form v-on:submit.prevent="submitForm">
         <input type="text" />

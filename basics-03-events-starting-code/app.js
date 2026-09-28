@@ -5,6 +5,15 @@ const app = Vue.createApp({
       Name: "",
     };
   },
+  computed:{
+    fullName(){
+      console.log("Running again");
+      if(this.Name === ""){
+        return "";
+      }
+      return this.Name + " Elsayed";
+    },
+  },
   methods: {
     submitForm() {
       event.preventDefault(); // to prevent the default behavior of the form submission, which is to refresh the page
